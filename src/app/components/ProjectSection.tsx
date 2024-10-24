@@ -18,7 +18,7 @@ const projects: Project[] = [
     tags: ["React", "Tailwind", "JavaScript"],
     link: "https://utsweb-three.vercel.app/",
     github: "https://github.com/almahdi00/utsweb",
-    image: "img/Web1.png"
+    image: "img/web1.png"
   },
   {
     title: "Portfolio Website",
