@@ -1,14 +1,6 @@
 "use client";
-import {
-  Mail,
-  Github,
-  Linkedin,
-  Instagram,
-  Send,
-  Phone,
-  MapPin,
-  ArrowUp,
-} from "lucide-react";
+import { FiMail, FiGithub, FiLinkedin, FiSend, FiPhone, FiMapPin, FiArrowUp } from "react-icons/fi"; // Mengganti ikon lucide-react dengan react-icons
+import { FaInstagram } from "react-icons/fa"; // Mengganti Instagram dari react-icons/fa
 import { useState } from "react";
 
 function Footer() {
@@ -75,15 +67,15 @@ function Footer() {
               <a
                 href="mailto:muhammadalmahdi016@gmail.com"
                 className="flex items-center gap-2 text-sm hover:text-blue-400 transition-colors duration-300">
-                <Mail size={16} />
+                <FiMail size={16} /> {/* Ikon diganti */}
                 muhammadalmahdi016@gmail.com
               </a>
               <p className="flex items-center gap-2 text-sm">
-                <Phone size={16} />
+                <FiPhone size={16} /> {/* Ikon diganti */}
                 +62 XXX-XXXX-XXXX
               </p>
               <p className="flex items-center gap-2 text-sm">
-                <MapPin size={16} />
+                <FiMapPin size={16} /> {/* Ikon diganti */}
                 Jakarta, Indonesia
               </p>
             </div>
@@ -104,7 +96,7 @@ function Footer() {
                 <button
                   type="submit"
                   className="absolute right-2 top-1/2 -translate-y-1/2 text-blue-500 hover:text-blue-400 transition-colors duration-300">
-                  <Send size={16} />
+                  <FiSend size={16} /> {/* Ikon diganti */}
                 </button>
               </div>
               {isSubscribed && (
@@ -125,9 +117,9 @@ function Footer() {
             </p>
             <div className="flex items-center gap-4">
               {[
-                { icon: Github, href: "#" },
-                { icon: Linkedin, href: "#" },
-                { icon: Instagram, href: "#" },
+                { icon: FiGithub, href: "#" },
+                { icon: FiLinkedin, href: "#" },
+                { icon: FaInstagram, href: "#" }, // Mengganti Instagram ke FaInstagram
               ].map(({ icon: Icon, href }, index) => (
                 <a
                   key={index}
@@ -147,7 +139,7 @@ function Footer() {
       <button
         onClick={scrollToTop}
         className="absolute bottom-4 right-4 p-2 bg-blue-500 rounded-full hover:bg-blue-400 transition-colors duration-300">
-        <ArrowUp size={20} />
+        <FiArrowUp size={20} /> {/* Ikon diganti */}
       </button>
     </footer>
   );

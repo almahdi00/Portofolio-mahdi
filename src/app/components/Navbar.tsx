@@ -1,5 +1,5 @@
 'use client'
-import { Menu, X, Home, FolderKanban, User2, Phone } from 'lucide-react';
+import { FiMenu, FiX, FiHome, FiFolder, FiUser, FiPhone } from 'react-icons/fi'; // Import react-icons
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
@@ -19,13 +19,12 @@ function Navbar() {
   }, []);
 
   const navItems = [
-    { id: 'home', label: 'Home', icon: Home, href: '/' },
-    { id: 'myprojects', label: 'Projects', icon: FolderKanban, href: '#myprojects' },
-    { id: 'about', label: 'About', icon: User2, href: '#about' },
-    { id: 'contact', label: 'Contact', icon: Phone, href: '#contact' }
+    { id: 'home', label: 'Home', icon: FiHome, href: '/' }, // Menggunakan react-icons
+    { id: 'myprojects', label: 'Projects', icon: FiFolder, href: '#myprojects' },
+    { id: 'about', label: 'About', icon: FiUser, href: '#about' },
+    { id: 'contact', label: 'Contact', icon: FiPhone, href: '#contact' }
   ];
 
-  // Menambahkan tipe untuk sectionId
   const scrollToSection = (sectionId: string) => {
     setActiveSection(sectionId);
     setIsMobileMenuOpen(false);
@@ -104,7 +103,7 @@ function Navbar() {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="md:hidden p-2 rounded-lg text-gray-400 hover:text-white focus:outline-none"
           >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />} {/* Mengganti icon menu */}
           </button>
         </div>
 

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Code, BookOpen, Award, User2 } from "lucide-react";
+import { FiCode, FiBookOpen, FiAward, FiUser } from "react-icons/fi";
 
 // Definisikan tipe untuk SkillBar
 interface Skill {
@@ -59,7 +59,8 @@ const InfoCard: React.FC<InfoCardProps> = ({ icon: Icon, title, items }) => {
     >
       <div className="flex items-center gap-3 mb-4">
         <div className="p-2 bg-blue-500/20 rounded-lg">
-          <Icon className="text-blue-500" size={24} />
+          {/* Jangan lupa tambahkan 'size' di properti ikon */}
+          <Icon size={24} className="text-blue-500" />
         </div>
         <h3 className="text-xl font-bold text-white">{title}</h3>
       </div>
@@ -93,7 +94,7 @@ function AboutSection() {
         {/* About Me Header */}
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-2 mb-4">
-            <User2 className="text-blue-500" size={32} />
+            <FiUser size={32} />
             <h2 className="text-4xl font-bold text-white">About Me</h2>
           </div>
           <p className="text-gray-400 max-w-2xl mx-auto">
@@ -132,11 +133,7 @@ function AboutSection() {
             </h3>
             <div className="max-w-md">
               {skills.map((skill, index) => (
-                <SkillBar
-                  key={index}
-                  skill={skill.name}
-                  level={skill.level}
-                />
+                <SkillBar key={index} skill={skill.name} level={skill.level} />
               ))}
             </div>
           </div>
@@ -145,19 +142,19 @@ function AboutSection() {
         {/* Info Cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 md:px-0">
           <InfoCard
-            icon={BookOpen}
+            icon={FiBookOpen}
             title="Education"
             items={["PKBM 01 Jakarta", "SMK Negeri 21 Jakarta"]}
           />
           <InfoCard
-            icon={Award}
+            icon={FiAward}
             title="Certification"
             items={[
               "Virtual Bootcamp UNSIA x UNAS Digital Business and Cyber Security (2024)",
             ]}
           />
           <InfoCard
-            icon={Code}
+            icon={FiCode}
             title="Technologies"
             items={[
               "Frontend Development",

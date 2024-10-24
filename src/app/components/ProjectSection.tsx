@@ -1,5 +1,5 @@
 'use client'
-import { GithubIcon, ExternalLink, Code2 } from 'lucide-react';
+import { FiGithub, FiExternalLink, FiCode } from 'react-icons/fi'; // Import dari react-icons
 import { useState } from 'react';
 
 interface Project {
@@ -79,7 +79,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
               rel="noopener noreferrer"
               className="flex items-center gap-1 text-sm text-white hover:text-blue-400 transition-colors"
             >
-              <ExternalLink size={16} />
+              <FiExternalLink size={16} /> {/* Ikon dari react-icons */}
               <span>Live Demo</span>
             </a>
             <a
@@ -88,7 +88,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
               rel="noopener noreferrer"
               className="flex items-center gap-1 text-sm text-white hover:text-blue-400 transition-colors"
             >
-              <GithubIcon size={16} />
+              <FiGithub size={16} /> {/* Ikon dari react-icons */}
               <span>Source</span>
             </a>
           </div>
@@ -104,7 +104,7 @@ function MyProjectSection() {
       <div className="container mx-auto px-4">
         <div className ="mb-12 text-center">
           <div className="flex items-center justify-center gap-2 mb-4">
-            <Code2 className="text-blue-500" size={32} />
+            <FiCode size={32} /> {/* Ikon dari react-icons */}
             <h2 className="text-4xl font-bold text-white">
               Project Portfolio
             </h2>
