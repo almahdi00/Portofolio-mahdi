@@ -55,11 +55,9 @@ const InfoCard: React.FC<InfoCardProps> = ({ icon: Icon, title, items }) => {
     <div
       className={`bg-gray-900 rounded-xl p-6 transform transition-all duration-700 ${
         isVisible ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0"
-      }`}
-    >
+      }`}>
       <div className="flex items-center gap-3 mb-4">
         <div className="p-2 bg-blue-500/20 rounded-lg">
-          {/* Jangan lupa tambahkan 'size' di properti ikon */}
           <Icon size={24} className="text-blue-500" />
         </div>
         <h3 className="text-xl font-bold text-white">{title}</h3>
@@ -68,8 +66,7 @@ const InfoCard: React.FC<InfoCardProps> = ({ icon: Icon, title, items }) => {
         {items.map((item: string, index: number) => (
           <li
             key={index}
-            className="flex items-center gap-2 text-gray-300 hover:text-blue-400 transition-colors"
-          >
+            className="flex items-center gap-2 text-gray-300 hover:text-blue-400 transition-colors">
             <div className="w-1.5 h-1.5 rounded-full bg-blue-500" />
             {item}
           </li>
@@ -81,11 +78,12 @@ const InfoCard: React.FC<InfoCardProps> = ({ icon: Icon, title, items }) => {
 
 function AboutSection() {
   const skills: Skill[] = [
-    { name: "HTML/CSS", level: 75 },
+    { name: "HTML/CSS", level: 70 },
     { name: "JavaScript", level: 45 },
-    { name: "React/Next.js", level: 80 },
-    { name: "Tailwind CSS", level: 80 },
-    { name: "Unity", level: 40 },
+    { name: "React/Next.js", level: 50 },
+    { name: "Laravel", level: 75 },
+    { name: "Tailwind CSS", level: 60 },
+    { name: "Gdevelope", level: 80 },
   ];
 
   return (
@@ -97,16 +95,15 @@ function AboutSection() {
             <FiUser size={32} />
             <h2 className="text-4xl font-bold text-white">About Me</h2>
           </div>
-          <p className="text-gray-400 max-w-2xl mx-auto">
-            Saya adalah seorang pemula di dunia pemrograman yang antusias untuk
-            terus belajar dan berkembang. Meskipun baru memulai perjalanan ini,
-            saya sudah memiliki dasar dalam beberapa bahasa pemrograman dan
-            konsep pengembangan web. Saya senang mengeksplorasi teknologi baru
-            dan mencari tantangan yang dapat membantu saya meningkatkan
-            keterampilan saya. Dengan semangat belajar yang tinggi, saya
-            berkomitmen untuk menguasai lebih banyak keterampilan teknis dan
-            terus memperbaiki diri sebagai pengembang yang lebih baik setiap
-            hari.
+          <p className="text-gray-400 max-w-2xl mx-auto hover:text-white duration-300">
+            I&apos;m a beginner in the world of programming who is enthusiastic about
+            continuing to learn and grow. Although I&apos;m just starting out on this
+            journey, I already have a foundation in several programming
+            languages and web development concepts. I enjoy exploring new
+            technologies and seeking challenges that can help me improve my
+            skills. With a strong learning spirit, I&apos;m committed to mastering
+            more technical skills and continually improving myself as a better
+            developer every day.
           </p>
         </div>
 
@@ -161,7 +158,8 @@ function AboutSection() {
               "Responsive Design",
               "UI/UX Development",
               "Version Control (Git)",
-              "Game Development (Unity)",
+              "Gdevelope (Game Engine)",
+              "Laravel",
             ]}
           />
         </div>

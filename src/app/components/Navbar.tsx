@@ -1,62 +1,67 @@
-'use client'
-import { FiMenu, FiX, FiHome, FiFolder, FiUser, FiPhone } from 'react-icons/fi'; // Import react-icons
-import Link from 'next/link';
-import { useEffect, useState } from 'react';
+"use client";
+import { FiMenu, FiX, FiHome, FiFolder, FiUser, FiPhone } from "react-icons/fi"; // Import react-icons
+import Link from "next/link";
+import { useEffect, useState } from "react";
 
 function Navbar() {
   
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('home');
+  const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const navItems = [
-    { id: 'home', label: 'Home', icon: FiHome, href: '/' }, // Menggunakan react-icons
-    { id: 'myprojects', label: 'Projects', icon: FiFolder, href: '#myprojects' },
-    { id: 'about', label: 'About', icon: FiUser, href: '#about' },
-    { id: 'contact', label: 'Contact', icon: FiPhone, href: '#contact' }
+    { id: "home", label: "Home", icon: FiHome, href: "/" }, // Menggunakan react-icons
+    {
+      id: "myprojects",
+      label: "Projects",
+      icon: FiFolder,
+      href: "#myprojects",
+    },
+    { id: "about", label: "About", icon: FiUser, href: "#about" },
+    { id: "contact", label: "Contact", icon: FiPhone, href: "#contact" },
   ];
 
   const scrollToSection = (sectionId: string) => {
     setActiveSection(sectionId);
     setIsMobileMenuOpen(false);
-    
-    if (sectionId === 'home') {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    if (sectionId === "home") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
       return;
     }
 
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   return (
-    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-gray-900/95 backdrop-blur-md shadow-lg' 
-        : 'bg-transparent'
-    }`}>
+    <nav
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        isScrolled
+          ? "bg-gray-900/95 backdrop-blur-md shadow-lg"
+          : "bg-transparent"
+      }`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link 
+          <Link
             href="/"
             className="flex items-center space-x-2 text-white"
             onClick={(e) => {
               e.preventDefault();
-              scrollToSection('home');
-            }}
-          >
+              scrollToSection("home");
+            }}>
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-200" />
               <div className="relative px-3 py-1 bg-gray-900 ring-1 ring-gray-800 rounded-lg leading-none">
@@ -81,10 +86,9 @@ function Navbar() {
                   }}
                   className={`relative px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 group ${
                     activeSection === item.id
-                      ? 'text-blue-400'
-                      : 'text-gray-300 hover:text-white'
-                  }`}
-                >
+                      ? "text-blue-400"
+                      : "text-gray-300 hover:text-white"
+                  }`}>
                   <span className="relative z-10 flex items-center gap-1">
                     <Icon size={16} />
                     {item.label}
@@ -101,18 +105,17 @@ function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 rounded-lg text-gray-400 hover:text-white focus:outline-none"
-          >
-            {isMobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />} {/* Mengganti icon menu */}
+            className="md:hidden p-2 rounded-lg text-gray-400 hover:text-white focus:outline-none">
+            {isMobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}{" "}
+            {/* Mengganti icon menu */}
           </button>
         </div>
 
         {/* Mobile Navigation */}
-        <div className={`md:hidden transition-all duration-300 ease-in-out ${
-          isMobileMenuOpen 
-            ? 'max-h-64 opacity-100'
-            : 'max-h-0 opacity-0'
-        } overflow-hidden`}>
+        <div
+          className={`md:hidden transition-all duration-300 ease-in-out ${
+            isMobileMenuOpen ? "max-h-64 opacity-100" : "max-h-0 opacity-0"
+          } overflow-hidden`}>
           <div className="px-2 pt-2 pb-3 space-y-1">
             {navItems.map((item) => {
               const Icon = item.icon;
@@ -126,10 +129,9 @@ function Navbar() {
                   }}
                   className={`flex items-center gap-2 px-3 py-2 rounded-lg text-base font-medium transition-colors duration-200 ${
                     activeSection === item.id
-                      ? 'bg-blue-500/10 text-blue-400'
-                      : 'text-gray-300 hover:bg-gray-800 hover:text-white'
-                  }`}
-                >
+                      ? "bg-blue-500/10 text-blue-400"
+                      : "text-gray-300 hover:bg-gray-800 hover:text-white"
+                  }`}>
                   <Icon size={18} />
                   {item.label}
                 </a>

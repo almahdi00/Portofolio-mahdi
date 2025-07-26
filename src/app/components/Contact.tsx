@@ -27,22 +27,6 @@ function Footer() {
 
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-          {/* About Section */}
-          <div className="space-y-4">
-            <h3 className="text-xl font-bold text-white mb-4">About Me</h3>
-            <p className="text-sm leading-relaxed">
-              Saya adalah seorang pemula di dunia pemrograman yang antusias
-              untuk terus belajar dan berkembang. Meskipun baru memulai
-              perjalanan ini, saya sudah memiliki dasar dalam beberapa bahasa
-              pemrograman dan konsep pengembangan web. Saya senang
-              mengeksplorasi teknologi baru dan mencari tantangan yang dapat
-              membantu saya meningkatkan keterampilan saya. Dengan semangat
-              belajar yang tinggi, saya berkomitmen untuk menguasai lebih banyak
-              keterampilan teknis dan terus memperbaiki diri sebagai pengembang
-              yang lebih baik setiap hari.
-            </p>
-          </div>
-
           {/* Quick Links */}
           <div className="space-y-4">
             <h3 className="text-xl font-bold text-white mb-4">Quick Links</h3>
@@ -72,7 +56,7 @@ function Footer() {
               </a>
               <p className="flex items-center gap-2 text-sm">
                 <FiPhone size={16} /> {/* Ikon diganti */}
-                +62 XXX-XXXX-XXXX
+                +62 895-1609-0870
               </p>
               <p className="flex items-center gap-2 text-sm">
                 <FiMapPin size={16} /> {/* Ikon diganti */}
@@ -117,9 +101,9 @@ function Footer() {
             </p>
             <div className="flex items-center gap-4">
               {[
-                { icon: FiGithub, href: "#" },
+                { icon: FiGithub, href: "#https://github.com/almahdi00" },
                 { icon: FiLinkedin, href: "#" },
-                { icon: FaInstagram, href: "#" }, // Mengganti Instagram ke FaInstagram
+                { icon: FaInstagram, href: "https://www.instagram.com/41_mhdi/" }, // Mengganti Instagram ke FaInstagram
               ].map(({ icon: Icon, href }, index) => (
                 <a
                   key={index}
