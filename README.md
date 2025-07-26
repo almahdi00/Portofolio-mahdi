@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🌐 Personal Portfolio Website – Muhammad Al Mahdi
 
-## Getting Started
+Welcome to my personal portfolio website! This project showcases my background, skills, and the projects I’ve worked on as a developer and technology enthusiast. It's built to reflect who I am, what I can do, and how I can help bring ideas to life.
 
-First, run the development server:
+ 🚀 Live Preview
+
+🔗 View Website: https://portofolio-mahdi.vercel.app/
+
+📧 Email: mailto:muhammadalmahdi016@gmail.com
+
+
+ 🛠 Technologies Used
+
+- [Next.js](https://nextjs.org/) – React framework for production
+- [Tailwind CSS](https://tailwindcss.com/) – utility-first CSS framework
+- [Framer Motion](https://www.framer.com/motion/) – smooth animations
+- [TypeScript](https://www.typescriptlang.org/) (optional)
+- [Vercel](https://vercel.com/) – deployment platform
+
+
+🧩 Key Features
+
+- 🔥 Fully responsive design (mobile + desktop)
+- 🎨 Clean, modern UI
+- 🧑‍💻 About Me section
+- 📁 Projects section (with live demo & code links)
+- 📬 Contact section
+
+
+
+💻 How to Run Locally
 
 ```bash
+# Clone the repository
+git clone https://github.com/almahdi00/Portofolio-mahdi.git
+cd nextjs-portfolio
+
+# Install dependencies
+npm install
+
+# Run the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Open http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+📦 Deployment
+This project is ready to deploy on Vercel.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+bash
+Salin
+Edit
+# Push to GitHub
+git push origin main
 
-## Learn More
+# Visit https://vercel.com/import to import the repo
+# or use Vercel CLI
 
-To learn more about Next.js, take a look at the following resources:
+📃 License
+MIT License © 2025 Muhammad Almahdi
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+🙋‍♂️ Let’s Connect
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+🐙 GitHub: @almahdi00
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+📸 Instagram: @41_mhdi
