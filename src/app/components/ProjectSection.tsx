@@ -124,7 +124,7 @@ function MyProjectSection() {
             <h2 className="text-4xl font-bold text-white">My Project</h2>
           </div>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Below is a collection of projects I&aps;ve worked on. Each project
+            Below is a collection of projects I&apos;ve worked on. Each project
             reflects my dedication to modern web development.
           </p>
         </div>
